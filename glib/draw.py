@@ -4,7 +4,7 @@ from numpy import arange
 
 from .graph import Graph
 
-def draw(graph: Graph, fig_size=(20, 10), node_color='#6200a6', edge_color='#6200a6', font_size=18, font_color='black', font_family='JetBrains Mono', font_weight='semibold', node_size=3500):
+def draw(graph: Graph, fig_size=(20, 10), node_color='#daa6ff', edge_color='#b755fb', font_size=18, font_color='black', font_family='JetBrains Mono', font_weight='semibold', node_size=3500):
   nodes = graph.nodes
   edges = graph.edges
 
@@ -16,10 +16,10 @@ def draw(graph: Graph, fig_size=(20, 10), node_color='#6200a6', edge_color='#620
   for e in edges:
     G.add_edge(e[0], e[1], weight=e[2])
 
-  pos = nx.spring_layout(G, iterations=200)
+  pos = nx.shell_layout(G)
   
   plt.figure(figsize=fig_size)
-  nx.draw(G, pos, node_size=node_size, node_color=node_color, font_size=font_size, font_color=font_color, font_family=font_family, font_weight=font_weight, alpha=0.25)
+  nx.draw(G, pos, node_size=node_size, node_color=node_color, font_size=font_size, font_color=font_color, font_family=font_family, font_weight=font_weight, alpha=0.75)
   nx.draw_networkx_labels(G, pos, font_size=25, font_weight='semibold', font_family='JetBrains Mono')
   nx.draw_networkx_edges(G, pos, arrows=graph.directed, edge_color=edge_color, width=3, arrowstyle='->', arrowsize=10, node_size=node_size, alpha=0.5)
   nx.draw_networkx_edge_labels(G, pos=pos, edge_labels={(u, v): d['weight'] for u, v, d in G.edges(data=True)}, font_size=font_size, font_weight=font_weight, font_family=font_family)

@@ -3,18 +3,18 @@ INF = float('inf')
 
 class Graph:
   @staticmethod
-  def createDenseGraph(nodes: list, directed: bool = False, no_self_edges: bool = True):
+  def createDenseGraph(nodes: list, directed: bool = False, no_self_edges: bool = True, rand_min=1, rand_max=100):
     from random import randint
 
     g = Graph(directed=directed, no_self_edges=no_self_edges)
     g.add_nodes(nodes)
     for i in range(len(nodes)):
       for j in range(len(nodes)):
-        g.add_edge(nodes[i], nodes[j], randint(1, 100))
+        g.add_edge(nodes[i], nodes[j], randint(rand_min, rand_max))
     return g
 
   @staticmethod
-  def createRandomGraph(nodes: list, directed: bool = False, no_self_edges: bool = True):
+  def createRandomGraph(nodes: list, directed: bool = False, no_self_edges: bool = True, rand_min=1, rand_max=100):
     from random import randint
 
     g = Graph(directed=directed, no_self_edges=no_self_edges)
@@ -23,7 +23,7 @@ class Graph:
     for i in range(len(nodes)):
       for j in range(len(nodes)):
         if randint(0, 1) == 1:
-          g.add_edge(nodes[i], nodes[j], randint(1, 100))
+          g.add_edge(nodes[i], nodes[j], randint(rand_min, rand_max))
 
     return g
 
