@@ -139,10 +139,9 @@ def bellman_ford(graph: Graph, src: str):
   return True, D, P
 
 def floyd_warshall(graph: Graph):
-  from copy import deepcopy
 
-  matrix = deepcopy(graph.M) # Copia la matrice del grafo
-  nodes  = len(graph.nodes)  # Numero di nodi
+  matrix = graph.adjacency_matrix # Copia la matrice del grafo
+  nodes  = len(graph.nodes)       # Numero di nodi
 
   for k in range(nodes):
     for i in range(nodes):
