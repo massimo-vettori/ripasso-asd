@@ -113,7 +113,7 @@ def dijkstra(graph: Graph, src: str) -> tuple:
       # Se il nodo ancora non è stato visitato
       if v not in V:
         __relax(u, v, w, D, P) # Aggiorno le distanze e i predecessori
-        Q.put((D[v], v))     # Aggiungo il nodo alla coda
+        Q.put((D[v], v))       # Aggiungo il nodo alla coda
 
   return D, P
 
