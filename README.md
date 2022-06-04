@@ -12,8 +12,6 @@ per "disegnare" i grafi tramite la libreria `matplotlib`.
 
 > La rappresentazione di grafi con numero di nodi pari, puo' essere difficile da interpretare, gli archi che uniscono 2 nodi passando per il centro sovrappongono le etichette che mostrano i pesi, quindi si riesce a vedere solamente l'ultimo che e' stato disegnato, pertanto i migliori casi sono quelli in cui il numero di nodi e' dispari
 
-> Lo stesso problema di visualizzazione si presenta quando uno o piu' nodi sono scollegati da qualsiasi altro nodo.
-
 ### Uso:
 Per utilizzare il file principale, ovvero `main.ipynb`, bisogna prima di tutto impostare l'ambiente virtuale
 
