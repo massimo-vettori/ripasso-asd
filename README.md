@@ -10,8 +10,7 @@ per "disegnare" i grafi tramite la libreria `matplotlib`.
 
 > Potete trovare alcuni esempi di come usare la libreria dentro lo stesso file, (`main.ipynb`).
 
-> La rappresentazione di grafi con archi con pesi negativi puo' essere un po' strana, se ci sono tanti nodi, non viene visualizzato in maniera ottimale. Per questo devo indagare un
-> po di piu' su come gestire questo problema.
+> La rappresentazione di grafi con numero di nodi pari, puo' essere difficile da interpretare, gli archi che uniscono 2 nodi passando per il centro sovrappongono le etichette che mostrano i pesi, quindi si riesce a vedere solamente l'ultimo che e' stato disegnato, pertanto i migliori casi sono quelli in cui il numero di nodi e' dispari
 
 > Lo stesso problema di visualizzazione si presenta quando uno o piu' nodi sono scollegati da qualsiasi altro nodo.
 
